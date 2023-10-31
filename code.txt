@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navya Portfolio</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects.js">
+</head>
+<body>
+
+    
+<!-- header section starts here -->
+<header>
+    <div class="user">
+        <img src="images/pic.jpg" alt="">
+        <h3 class="name">Navya Teja</h3>
+        <p class="post">front end developer</p>
+    </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+</header>
+<!-- header section ends here -->
+
+<div id="menu" class="fas fa-bars"></div>
+
+<!--  home section starts here    -->
+<section class="home" id="home">
+    <h3>HI THERE !</h3>
+    <h1>I'M <span>D.Navya Teja</span></h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus laborum illo, dolorem 
+        laboriosam, excepturi eveniet esse sunt, odio qui tenetur ea officia eligendi. 
+        Ipsum provident eum quod magnam! Quasi, sequi. Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <a href="images/D.Navya Teja.pdf" download class="btn btn2">Download CV</a>
+        <a href="#about"><button class="btn">About Me <i class="fas fa-user"></i></button></a>
+</section>
+<!--  home section ends here    -->
+<!--    about section starts here  -->
+<section class="about" id="about">
+    <div class="container"></div>
+    <h1 class="heading"> <span>About</span> Me </h1>
+    <div class="sub-title">
+        <p>I am D Navya Teja. I am flexible, reliable and possess excellent time keeping skills. 
+        I am an enthusiastic, self-motivated, reliable, responsible and hard working person. </p> 
+    </div>               
+    <div class="tab-titles">
+        <p class="tab-links active-link" onclick="opentab('Technical Skills')">Technical Skills</p>
+        <p class="tab-links" onclick="opentab('Professional Skills')">Professional Skills</p>
+        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+        <p class="tab-links" onclick="opentab('education')">Education</p>
+    </div>
+    <div class="tab-contents active-tab" id="Technical Skills">
+        <ul>
+            <li><span>Technical Skills</span><br>C, Java, Python, MS Office, MS Excel, Salesforce(Admin, Apex, LWC)</li>
+            <li><span>Web Development</span><br>HTML, CSS, JavaScript</li>
+            <li><span>Version Control</span><br>Git, Visual Studio Code</li>
+            <li><span>Database Management</span><br>SQL</li>
+            <li><span>Operating Systems</span><br>Windows, Ubuntu, Linux</li>
+        </ul>
+    </div>
+    <div class="tab-contents" id="Professional Skills">
+        <ul>
+            <li>Problem - Solving</li>
+            <li>Critical Thinking</li>
+            <li>Teamwork and Collaborative</li>
+            <li>Attention to detail</li>
+            <li>Leadership</li>
+            <li>Adaptability</li>
+            <li>Creativity</li>
+            <li>Time Management</li>
+          </ul>
+    </div>
+    <div class="tab-contents" id="experience">
+        <ul>
+            <li><span>July 2023 - September 2023</span><br>Analyst trainee<br>Deloitte<br>
+            <p>Underwent salesforce specific training for three months, where I have gained the basic knowledge on<br> 
+                - Administrative Essentials for new Admins,<br>
+                - Declarative Development for Platform App Builders and <br>
+                - Building Application Programmatically using Apex & LWC</p></li>
+           <!-- <li><span>2019-2021</span><br>Team Lead at StarApp LLC.</li>
+            <li><span>2017-2019</span><br>UI/UX Design Executive at Coin Digital Ltd.</li>
+            <li><span>2016-2017</span><br>Internship at ekart eCommerce.</li> -->
+        </ul>
+    </div>
+    <div class="tab-contents" id="education">
+        <ul>
+            <li><span>2019-2023</span><br>B.Tech - Computer Science and Engineering
+                <br>Malla Reddy Engineering College For Women<br>CGPA : 8.61 / 10</li>
+            <li><span>2017-2019</span><br>Intermediate<br>Narayana Junior College<br>CGPA : 9.04 / 10</li>
+            <li><span>2017</span><br>SSC<br>Narayana EM School<br>CGPA : 9.8 / 10</li>
+        </ul>
+    </div>
+</section>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+<script>
+
+var sidemeu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemeu.style.right = "0";
+}
+function closemenu(){
+    sidemeu.style.right = "-200px";
+}
+
+</script>
+ <!--     about section ends here -->
+
+ <!-- Projects section starts here -->
+<section class="projects" id="projects">
+    <h1 class="heading"><span>Projects</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <p><span>Hobnob</span><br><br>Identification of hand sign language and 
+                conversion to text and audio.<br><br><span>Skills used : </span>Python, Deep Learning, ML, OpenCV</p>
+        </div>
+        <div class="box">
+            <p><span>Detection of Illicit Content Using NLP & ML</span><br><br>
+                Detecting the illicit texts and images in twitter app using NLP & SVM.
+                <br><br><span>Skills used : </span>Python, HTML, CSS, JavaScript, ML, NLP, MySQL</p>
+        </div>
+        <div class="box">
+            <p><span>Vitasi - A real time Contactless Vital Signs Estimation System</span><br><br>
+                The non-contact monitoring of vital signs like heart rate and breathe rate using PVMP & CNN.
+                <br><br><span>Skills used : </span>Python, HTML, CSS, JavaScript, MySQL</p>
+        </div>
+        <div class="box">
+            <p><span>Membership Inference Attack and Defense for Wireless Signal Classifiers Using 
+                Deep Learning</span><br><br>Identifying fake signals and providing defense mechanism.
+                <br><br><span>Skills used : </span>Python, HTML, CSS, JavaScript, Django, Deep Learning</p>
+        </div>
+    </div>
+</section>
+<!-- Projects section ends here -->
+<!-- achievements section starts here -->
+<section class="achievements" id="achievements">
+    <h1 class="heading"><span>Achievements</span> </h1>
+    <div class="container">
+        <div class="row">
+            <div class="project">
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+            </div>
+            <div class="project">
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+            </div>
+            <div class="project">
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+            </div>
+            <div class="project">
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- achievements section ends here -->
+<!-- Contact section startss here -->
+<section class="contact" id="contact">
+    <h1 class="heading"> <span>Contact</span> Me </h1>
+    <div class="row">
+        <div class="content">
+            <h3 class="title">Contact info</h3>
+            <div class="info">
+                <h3> <i class="fas fa-envelope"></i> navyateja1901@gmail.com </h3>
+                <h3> <i class="fas fa-phone"></i> 9390066983 </h3>
+                <h3> <i class="fas fa-map-marker-alt"></i> Guntur, Andhra Pradesh - 522006 </h3>
+            </div>
+        </div>
+
+        <form action="">
+            <input type="text" placeholder="name" class="box">
+            <input type="email" placeholder="email" class="box">
+            <input type="text" placeholder="project" class="box">
+            <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
+            <button type="submit" class="btn"> Send <i class="fas fa-paper-plane"></i> </button>
+        </form>
+    </div>
+</section>
+<!-- Contact section ends here -->
+<!--  Scroll top button starts here  -->
+<a href="#home" class="top">
+    <!-- <img src="images/image1.jpeg" alt=""> -->
+</a>
+<!--   Scroll top button ends here  -->
+
+
+
+<!-- jquery cdn link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+</html>
+
+
+
+<!--
+<div class="container">
+    <h1>Projects</h1>
+    <div class="row">
+        <div class="project">
+            <h2>Web Design</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+        </div>
+        <div class="project">
+            <h2>Web Design</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+        </div>
+        <div class="project">
+            <h2>Web Design</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+        </div>
+        <div class="project">
+            <h2>Web Design</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+        </div>
+    </div>
+</div> -->
+
+=============================================================================================
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+:root{
+    --yellow:#f9ca24;
+}
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform: none;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background: var(--yellow);
+    color: #333;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 1.4rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: #222;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--yellow);
+}
+
+body{
+    background: #111;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.btn{
+    padding:.7rem 3rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 5rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+.btn i{
+    padding:0 .5rem;
+    font-size: 1.8rem;
+}
+
+.btn:hover{
+    background: var(--yellow);
+}
+
+.heading{
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid#fff4;
+    color: #fff;
+}
+
+.heading span{
+    color: var(--yellow);
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .7rem solid var(--yellow);
+}
+
+header .user .name{
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+header .user .post{
+    font-size: 2rem;
+    color: #eee;
+}
+
+header .navbar{
+    width: 100%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: #333;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .navbar ul li a:hover{
+    background: var(--yellow);
+}
+
+#menu{
+    position: fixed;
+    top: 2rem; right: 2rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+/*   home section starts here */
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 0 15rem;
+}
+
+.home h3{
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.home h1{
+    font-size: 5rem;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.home h1 span{
+    color: var(--yellow);
+}
+
+.home p{
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+/*  home section ends here */
+/*   about section starts here */
+#about{         
+    font-size: 16px;                      /* year description size */   
+    padding: 2rem 0;
+    color: var(--yellow);
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+
+/*
+.row
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+*/
+.sub-title{
+    font-size: 2rem;
+    color: #eee;
+    padding: 2rem 0;
+    margin-left: 60px;
+} 
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0;
+    margin-left: 60px;
+    justify-content: center;            /* skills edu exp will come to centre */
+}
+.tab-links{
+    margin-right: 80px;                    /* space b/w skills exp edu */
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 100%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 20px 0 ;                    /*  space b/w column */
+}
+.tab-contents ul li span{
+    color: var(--yellow);
+    font-size: 18px;                      /*years  font  size  */
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+    margin-left: 245px;                      /* contents moves 60px from margin */
+    color: #fff;
+}
+/*   about section ends here */
+/* projects section starts here */
+.projects .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+}
+.projects .box-container .box{
+    height: 20rem;
+    width: 50rem;
+    border-radius: 1rem;
+    margin: 5rem;
+    overflow: hidden;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+}
+.projects .box-container .box span{
+    font-size: 16px;
+    color: var(--yellow);
+    margin-left: 0;
+}
+/* projects section ends here */
+.achievements .container{
+    height: 100vh;
+    width: 100%;
+    padding: 0 8%;
+    color: #fff;
+}
+.achievements .container h1{
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+}
+.achievements .container h1::after{
+    content: '';
+    background: #f9ca24;
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.achievements .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.project{
+    text-align: center;
+    padding: 25px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 0.5s, background 0.5s;
+}
+.project h2{
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.project:hover{
+    background: #f9ca24;
+    color: black;
+    transform: scale(1.05);
+}
+/* contact section starts here */
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .row .content{
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+}
+
+.contact .row form .box{
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background: #3333;
+    color: #fff;
+    text-transform: none;
+    font-size: 1.7rem;
+    width: 100%;
+}
+
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+}
+
+.contact .row form .message{
+    height: 15rem;
+    resize: none;
+
+}
+
+.contact .row .content .title{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.contact .row .content .info h3{
+    display: flex;
+    text-transform: none;
+    align-items: center;
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+    font-weight: normal;
+}
+
+.contact .row .content .info h3 i{
+    padding-right: 1rem;
+    color: var(--yellow);
+}
+
+/* contact section ends here */
+/* scroll top section starts here */
+.top{
+    position: fixed;
+    bottom: 7.5rem; right: 2rem;
+    z-index: 100;
+    display: none ;
+}
+/* scroll top section ends here */
+
+/* media queries */
+
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+
+    .home{
+        padding: 1rem 4rem;
+    }
+}
+
+@media (max-width:991px){
+    header{
+        left: -120%;
+    }
+    #menu{
+        display: block;
+    }
+    header.toggle{
+        left: 0%;
+    }
+
+    body{
+        padding: 0;
+
+    }
+}
+
+@media (max-width:768px){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media (max-width:400px){
+    header{
+        width: 100vw;
+    }
+    html{
+        width: 100vw;
+    }
+    .heading{
+        margin: 0 3rem;
+    }
+    .about .row .counter .box{
+        width: 100%;
+    }
+    .education .box-container .box{
+        width: 100%;
+    }
+    .portfolio .box-container .box{
+        width: 100%;
+    }
+    .contact .row form{
+        margin: 3rem 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==============================================================
+.container{
+    height: 100vh;
+    width: 100%;
+    padding: 0 8%;
+}
+.container h1{
+    text-align: center;
+    padding-top: 10%;
+    margin-bottom: 60px;
+    font-weight: 600;
+    position: relative;
+}
+.container h1::after{
+    content: '';
+    background: #f9ca24;
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+.project{
+    text-align: center;
+    padding: 25px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 0.5s, background 0.5s;
+}
+.project h2{
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.project:hover{
+    background: #f9ca24;
+    color: #fff;
+    transform: scale(1.05);
+} */
+=============================================================================================
+$(document).ready(function(){
+
+    $('#menu').click(function() {
+        $(this).toggleClass('fa-times');
+        $('header').toggleClass('toggle');
+    });
+
+    $(window).on('scroll load', function(){
+
+        $('#menu').removeClass('fa-times');
+        $('header').removeClass('toggle');
+
+        if($(window).scrollTop() > 0) {
+            $('.top').show();
+        }else{
+            $('.top').hide();
+        }
+    });
+
+    //smooth scrolling
+    $('a[href*="#"]').on('click',function(e){
+        e.preventDefault();
+
+        $('html, body').animate({
+        
+            scrollTop : $($(this).attr('href')).offset().top,
+        },
+        500,
+        'linear'
+        );
+    });
+
+});
+=============================================================================================
