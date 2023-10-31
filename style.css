@@ -239,7 +239,7 @@ header .navbar ul li a:hover{
 }
 .tab-contents.active-tab{
     display: block;
-    margin-left: 300px;                      /* contents moves 60px from margin */
+    margin-left: 200px;                      /* contents moves 60px from margin */
     color: #fff;
 }
 /*   about section ends here */
