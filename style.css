@@ -245,7 +245,8 @@ header .navbar ul li a:hover{
 /*   about section ends here */
 /* projects section starts here */
 .projects .box-container{
-    display: flex;
+    display: grid;
+    grid-gap: 30px;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
